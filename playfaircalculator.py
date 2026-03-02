@@ -79,7 +79,7 @@ def playfair_encrypt(plaintext, key):
     # Buat matriks
     matrix = create_playfair_matrix(key)
     
-    # Proses plaintext menjadi digraf
+    # Proses plainteks menjadi dwihuruf
     digraphs = process_digraphs(plaintext)
     
     ciphertext = ""
@@ -91,7 +91,7 @@ def playfair_encrypt(plaintext, key):
         row1, col1 = find_position(matrix, a)
         row2, col2 = find_position(matrix, b)
         
-        # Enkripsi berdasarkan aturan Playfair
+        # Enkripsi berdasarkan aturan Playfair Cipher
         if row1 == row2:
             # Baris sama, geser ke kanan
             ciphertext += matrix[row1][(col1 + 1) % 5]
@@ -112,7 +112,7 @@ def playfair_decrypt(ciphertext, key):
     # Buat matriks
     matrix = create_playfair_matrix(key)
     
-    # Proses ciphertext menjadi digraf
+    # Proses cipherteks menjadi dwihuruf
     digraphs = process_digraphs(ciphertext)
     
     plaintext = ""
@@ -124,7 +124,7 @@ def playfair_decrypt(ciphertext, key):
         row1, col1 = find_position(matrix, a)
         row2, col2 = find_position(matrix, b)
         
-        # Dekripsi berdasarkan aturan Playfair
+        # Dekripsi berdasarkan aturan Playfair Cipher
         if row1 == row2:
             # Baris sama, geser ke kiri
             plaintext += matrix[row1][(col1 - 1) % 5]
@@ -150,7 +150,6 @@ def main():
     st.markdown("---")
     
     # Sidebar untuk informasi
-    with st.sidebar:
         st.header("About Playfair Cipher")
         st.markdown("""
         **Playfair Cipher** adalah teknik enkripsi simetris yang menggunakan matriks 5x5 
@@ -271,6 +270,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
