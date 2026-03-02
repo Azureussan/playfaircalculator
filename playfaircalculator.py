@@ -182,7 +182,7 @@ def main():
         # Input teks
         plaintext = st.text_area(
             "Plaintext:",
-            value="WHERE ALL MIRACLES BEGIN",
+            value="",
             height=100,
             help="Masukkan teks yang akan dienkripsi"
         )
@@ -190,7 +190,7 @@ def main():
         # Input key
         key = st.text_input(
             "Key:",
-            value="SCHALE",
+            value="",
             help="Masukkan kunci untuk enkripsi/dekripsi"
         )
         
@@ -270,3 +270,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
