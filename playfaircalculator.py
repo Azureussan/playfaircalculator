@@ -153,7 +153,7 @@ def main():
         st.header("About Playfair Cipher")
         st.markdown("""
         **Playfair Cipher** adalah teknik enkripsi simetris yang menggunakan matriks 5x5 
-        yang berisi 25 huruf (menggabungkan I dan J).
+        yang berisi 25 huruf (menggabungkan I dan J dalam satu ruang matriks).
         
         **Aturan Enkripsi:**
         1. Jika dua huruf dalam baris yang sama → geser ke kanan
@@ -164,13 +164,6 @@ def main():
         1. Jika dua huruf dalam baris yang sama → geser ke kiri
         2. Jika dua huruf dalam kolom yang sama → geser ke atas
         3. Jika berbeda baris dan kolom → tukar kolom
-        """)
-        
-        st.header("Key Information")
-        st.info("""
-        **Current Key:** SCHALE
-        
-        Key ini akan digunakan untuk membuat matriks Playfair 5x5.
         """)
         
         st.header("Notes")
@@ -275,4 +268,5 @@ def main():
                 - Berbeda → tukar kolom
                 """)
 if __name__ == "__main__":
+
     main()
