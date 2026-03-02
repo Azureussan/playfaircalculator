@@ -150,6 +150,7 @@ def main():
     st.markdown("---")
     
     # Sidebar untuk informasi
+    with st.sidebar:
         st.header("About Playfair Cipher")
         st.markdown("""
         **Playfair Cipher** adalah teknik enkripsi simetris yang menggunakan matriks 5x5 
@@ -270,6 +271,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
