@@ -1,41 +1,6 @@
 import streamlit as st
 import re
 
-def prepare_text(text):
-    """Mempersiapkan teks untuk enkripsi Playfair"""
-    # Ubah ke huruf besar dan hapus karakter non-huruf
-    text = re.sub(r'[^A-Za-z]', '', text.upper())
-    # Ganti J dengan I
-    text = text.replace('J', 'I')
-    return text
-
-def create_playfair_matrix(key):
-    """Membuat matriks Playfair 5x5 dari key yang diberikan"""
-    # Siapkan key
-    key = prepare_text(key)
-    
-    # Buat list untuk matriks
-    matrix = []
-    used_chars = set()
-    
-    # Tambahkan karakter dari key
-    for char in key:
-        if char not in used_chars and char != 'J':
-            matrix.append(char)
-            used_chars.add(char)
-    
-    # Tambahkan sisa alfabet (kecuali J)
-    alphabet = 'ABCDEFGHIKLMNOPQRSTUVWXYZ'
-    for char in alphabet:
-        if char not in used_chars:
-            matrix.append(char)
-            used_chars.add(char)
-    
-    # Ubah menjadi matriks 5x5
-    playfair_matrix = [matrix[i:i+5] for i in range(0, 25, 5)]
-    
-    return playfair_matrix
-
 def display_matrix(matrix):
     """Menampilkan matriks Playfair dalam format tabel"""
     matrix_str = ""
@@ -270,4 +235,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
